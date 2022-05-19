@@ -48,6 +48,7 @@
         },}))
         app.set('view engine', 'handlebars')
     //mongoose
+    console.log('link de conexão: '+ db.mongoURI)
         mongoose.promise = global.promise
         mongoose.connect(db.mongoURI).then(()=>{
             console.log('banco conectado')
