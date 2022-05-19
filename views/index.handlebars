@@ -1,0 +1,37 @@
+{{#if user}}
+{{else}}
+<div class="bg-light p-5 rounded">
+    <h1>bem vindo ao blog</h1>
+    <p class="lead">um blog feito em NodeJS + Express + MongoDB</p>
+    <hr>
+    <div class="lead">faça o login para poder navegar sem problemas no nosso site</div>
+    <br>
+    <a class="btn btn-lg btn-primary" href="/usuarios/login" role="button">fazer login</a>
+  </div>
+<hr>
+{{/if}}
+<h2>novas postagens</h2>
+
+{{#each postagens}}
+
+<div class="card mt-2">
+  <div class="card-body">
+    <h3>{{titulo}}</h3>
+    <p>{{descricao}}</p>
+    <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+    <hr>
+    <small>Categoria: {{categoria.nome}}</small>
+    <br>
+    <small>Data de publicação: {{data}}</small>
+  </div>
+
+</div>
+
+{{else}}
+<div class="card">
+  <div class="card-body">
+    <h3>Nenhuma postagem postada</h3>
+  </div>
+</div>
+
+{{/each}}
