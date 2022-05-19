@@ -16,6 +16,7 @@
     const bcrypt = require('bcryptjs')
     const passport = require('passport')
     require ('./config/auth')(passport)
+    const db = require('./config/db')
     
 
 //configurando módulos
@@ -48,7 +49,7 @@
         app.set('view engine', 'handlebars')
     //mongoose
         mongoose.promise = global.promise
-        mongoose.connect('mongodb://localhost/blogapp').then(()=>{
+        mongoose.connect(db.mongoURI).then(()=>{
             console.log('banco conectado')
         }).catch((erro)=>{
             console.log('erro: '+erro)
