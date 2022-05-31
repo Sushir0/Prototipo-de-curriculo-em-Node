@@ -1,0 +1,38 @@
+<h2>Pesquisa:</h2>
+
+<p>categorias</p>
+{{#each categorias}}
+<a href="/categorias/search/{{slug}}">
+    <div class="card mt-2">
+        <div class="card-body">
+            <small>{{nome}}</small>
+        </div>
+    </div>
+</a>
+{{/each}}
+<hr>
+<p>postagens</p>
+{{#each postagens}}
+<a href="/postagens/search/{{slug}}">
+    <div class="card mt-2">
+        <div class="card-body">
+            <h5>{{titulo}}</h5>
+            <small>{{descricao}}</small>
+
+        </div>
+    </div>
+</a>
+{{/each}}
+<hr>
+<p>comentários</p>
+{{#each comentarios}}
+<a href="/postagens/search/{{postagem.slug}}">
+    <div class="card mt-2">
+        <div class="card-body">
+            <h5>{{titulo}}</h5>
+            <small>{{conteudo}}</small>
+        </div>
+    </div>
+</a>
+{{/each}}
+<br>

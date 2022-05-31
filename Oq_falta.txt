@@ -1,0 +1,11 @@
+o que não sei se consigo:
+criar postagens que funcionem para o currículo
+terminar o front end
+
+
+o que não sei se não consigo:
+ao excluir postagens pela categoria não ser redirecionado para outro link
+logar ao cadastrar
+colocar botão de excluir comentário do seu perfil
+navbar com administrador somente para adm
+excluir comentários ao excluir uma postagem ao excluir uma categoria 

@@ -1,7 +1,7 @@
 
 <h2>Lista de categorias</h2>
 <hr>
-<a href="/admin/categorias/add"><button type="button" class="btn btn-success">Nova categoria</button></a>
+<a href="/categorias/add"><button type="button" class="btn btn-success">Nova categoria</button></a>
 
 
 {{#each categorias}}
@@ -11,12 +11,16 @@
   <div class="card-body">
     <h5 class="card-title">{{nome}}</h5>
     <p class="card-text">{{slug}}</p>
-    <a href="/admin/categorias/edit/{{id}}">
+    <a href="/categorias/editar/search/{{id}}">
         <button type="button" class="btn btn-primary">Editar</button>
     </a>
-    <a href="/admin/categorias/deletar/{{id}}">
+    <a href="/categorias/editar/deletar/{{id}}">
       <button type="button"  class="btn btn-danger">excluir</button>
     </a>
+    <a href="/categorias/editar/admin/search/{{slug}}">
+        <button type="button"  class="btn btn-success">Postagens</button>
+    </a>
+  
   </div>
 </div>
 

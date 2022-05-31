@@ -1,10 +1,10 @@
 {{#if user}}
 {{else}}
 <div class="bg-light p-5 rounded">
-    <h1>bem vindo ao blog</h1>
-    <p class="lead">um blog feito em NodeJS + Express + MongoDB</p>
+    <h1>bem vindo ao meu currículo</h1>
+    <p class="lead">um currículo feito em NodeJS + Express + MongoDB + bootstrap</p>
     <hr>
-    <div class="lead">faça o login para poder navegar sem problemas no nosso site</div>
+    <div class="lead">faça o login para poder comentar em postagens e navegar sem problemas no nosso site</div>
     <br>
     <a class="btn btn-lg btn-primary" href="/usuarios/login" role="button">fazer login</a>
   </div>
@@ -18,7 +18,7 @@
   <div class="card-body">
     <h3>{{titulo}}</h3>
     <p>{{descricao}}</p>
-    <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+    <a href="/postagens/search/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
     <hr>
     <small>Categoria: {{categoria.nome}}</small>
     <br>

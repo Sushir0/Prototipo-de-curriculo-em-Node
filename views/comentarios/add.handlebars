@@ -1,0 +1,22 @@
+{{#each erros}}
+    <div class="alert alert-danger" role="alert">
+        {{texto}}
+    </div>
+{{else}}
+
+{{/each}}
+<h2>Novo comentario na postagem: {{comentario.postagem_titulo}}</h2>
+<div class="card">
+    <div class="card-body">
+        <form action="/comentarios/create/add/nova" method="post">
+        <label for="titulo">Titulo: </label>
+        <input type="text" name="titulo" id="titulo" placeholder="titulo do comentario" class="form-control" value="{{comentario.titulo}}">
+        <label for="conteudo">Conteúdo:</label>
+        <textarea name="conteudo" id="conteudo" placeholder="conteúdo do comentário" class="form-control">{{comentario.conteudo}}</textarea>
+        <input type="hidden" name="postagem" value="{{comentario.postagem}}">
+        <input type="hidden" name="usuario" value="{{comentario.usuario}}">
+        <input type="hidden" name="postagem_titulo" value="{{comentario.postagem_titulo}}">
+        <input class="btn btn-primary mt-4" type="submit" value="Criar comentário" placeholder="criar comentário">
+        </form>
+    </div>
+</div>

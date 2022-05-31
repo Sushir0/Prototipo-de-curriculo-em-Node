@@ -1,0 +1,35 @@
+
+<div class="card">
+    <div class="card-body">
+        <h1>{{postagem.titulo}}</h1>
+        <hr>
+        <small>Data de publicação: {{postagem.data}}</small>
+        <hr>
+        <p>{{postagem.conteudo}}</p>
+        <a href="/comentarios/create/add/{{postagem._id}}">
+            <button type="button" class="btn btn-primary">Novo comentário</button>
+        </a>
+    </div>
+</div>
+
+{{#each comentarios}}
+<div class="card mt-2">
+    <small>{{usuario.nome}}  ||  {{data}}</small>
+    <div class="card-body">
+        <h5>{{titulo}}</h5>
+        <p>{{conteudo}}</p>
+        <a href="/comentarios/editar/deletar/{{id}}">
+            <button type="button"  class="btn btn-danger">excluir</button>
+        </a>
+    </div>
+</div>
+
+{{else}}
+
+<div class="card mt-2">
+    <div class="card-body">
+        <h5>nenhum comentário</h5>
+    </div>
+</div>
+
+{{/each}}
